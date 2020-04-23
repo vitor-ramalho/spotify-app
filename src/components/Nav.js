@@ -2,6 +2,7 @@ import React from 'react'
 import { ReactComponent as Homeicon } from '../svg/home.svg'
 import { ReactComponent as Searchicon } from '../svg/search.svg'
 import { ReactComponent as Libicon } from '../svg/library.svg'
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
@@ -28,19 +29,25 @@ const Nav = () => {
                 </svg>
             </div>
             <ul>
-                <li className="active">
-                    <Homeicon />
+                <Link to="/">
+                    <li className="active">
+                        <Homeicon />
                     Home
                 </li>
-                <li>
-                    <Searchicon />
+                </Link>
+                <Link to="/search">
+                    <li>
+                        <Searchicon />
                     Search
                 </li>
-                <li>
-                    <Libicon />
+                </Link>
+                <Link to="/library">
+                    <li>
+                        <Libicon />
                     Your Library
 
                 </li>
+                </Link>
             </ul>
             <div className="cookies">
                 <span>Cookies</span>
